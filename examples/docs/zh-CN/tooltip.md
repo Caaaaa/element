@@ -205,7 +205,7 @@ tooltip 内不支持 disabled form 元素，参考[MDN](https://developer.mozill
 |  effect        |  默认提供的主题  | String            | dark/light | dark  |
 |  content        |  显示的内容，也可以通过 `slot#content` 传入 DOM  | String            | — | — |
 |  placement        |  Tooltip 的出现位置  | String           |  top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end |  bottom |
-|  value(v-model) |  状态是否可见  | Boolean           | — |  false |
+|  value / v-model |  状态是否可见  | Boolean           | — |  false |
 |  disabled       |  Tooltip 是否可用  | Boolean           | — |  false |
 |  offset        |  出现位置的偏移量  | Number           | — |  0 |
 |  transition     |  定义渐变动画      | String             | — | el-fade-in-linear |
@@ -215,3 +215,4 @@ tooltip 内不支持 disabled form 元素，参考[MDN](https://developer.mozill
 | manual | 手动控制模式，设置为 true 后，mouseenter 和 mouseleave 事件将不会生效 | Boolean | — | false |
 | popper-class | 为 Tooltip 的 popper 添加类名 | String | — | — |
 | enterable | 鼠标是否可进入到 tooltip 中 | Boolean | — | true |
+| hide-after | Tooltip 出现后自动隐藏延时，单位毫秒，为 0 则不会自动隐藏 | number | — | 0 |

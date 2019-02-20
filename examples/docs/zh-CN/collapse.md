@@ -58,6 +58,11 @@
       return {
         activeNames: ['1']
       };
+    },
+    methods: {
+      handleChange(val) {
+        console.log(val);
+      }
     }
   }
 </script>
@@ -110,7 +115,7 @@
 <el-collapse accordion>
   <el-collapse-item>
     <template slot="title">
-      一致性 Consistency<i class="header-icon el-icon-information"></i>
+      一致性 Consistency<i class="header-icon el-icon-info"></i>
     </template>
     <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
     <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
@@ -135,13 +140,13 @@
 ### Collapse Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
+| value / v-model | 当前激活的面板(如果是手风琴模式，绑定值类型需要为`string`，否则为`array`) | string / array | — | — |
 | accordion | 是否手风琴模式 | boolean | — | false |
-| value | 当前激活的面板(如果是手风琴模式，绑定值类型需要为`string`，否则为`array`) | string/array | — | — |
 
 ### Collapse Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|---------|---------|
-| change | 当前激活面板改变时触发(如果是手风琴模式，参数 `activeNames` 类型为`string`，否则为`array`) | (activeNames: array\|string) |
+| change | 当前激活面板改变时触发(如果是手风琴模式，参数 `activeNames` 类型为`string`，否则为`array`) | (activeNames: array / string) |
 
 ### Collapse Item Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
